@@ -19,7 +19,7 @@ public class RegistrationFormController {
     public JFXButton btnRegister;
     public TextField txtSearchStudent;
     public JFXButton btnSearchStudent;
-    public ComboBox cmbStudentID;
+    public ComboBox<String> cmbStudentID;
     public JFXTextField txtStudentName;
     public JFXTextField txtMobileNumber;
     public JFXTextField txtAddress;
@@ -28,6 +28,6 @@ public class RegistrationFormController {
     public JFXTextField txtKeyMoneyFee;
     public JFXTextField txtRoomType;
     public JFXTextField txtRoomsQty;
-    public ComboBox cmbRoomTypeID;
+    public ComboBox<String> cmbRoomTypeID;
     public TextField txtReservationID;
 }
