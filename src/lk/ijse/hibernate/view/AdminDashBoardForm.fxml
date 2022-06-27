@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="783.0" prefWidth="1406.0" style="-fx-background-color: #F3F3F3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.AdminDashBoardFormController">
+   <children>
+      <AnchorPane prefHeight="783.0" prefWidth="340.0" style="-fx-background-color: #16287C;">
+         <children>
+            <Label fx:id="lblRegistrationDetails" layoutY="299.0" prefHeight="66.0" prefWidth="340.0" textFill="WHITE" />
+            <Label fx:id="lblChangePassword" layoutY="229.0" prefHeight="66.0" prefWidth="340.0" textFill="WHITE" />
+            <Label fx:id="lblRoom" layoutY="159.0" prefHeight="66.0" prefWidth="340.0" />
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="23.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/images/icons8-bed-100%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="117.0" layoutY="25.0" text="D24 Hostel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="120.0" layoutY="60.0" opacity="0.36" prefHeight="5.0" prefWidth="95.0" />
+            <Circle fill="WHITE" layoutX="71.0" layoutY="96.0" radius="13.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="26.0" fitWidth="20.0" layoutX="61.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/images/icons8-dashboard-layout-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="98.0" layoutY="83.0" prefHeight="27.0" prefWidth="183.0" text="ADMIN DASHBOARD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="23.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/images/pwd1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnRoom" layoutX="54.0" layoutY="173.0" mnemonicParsing="false" onAction="#manageRoomOnAction" prefHeight="39.0" prefWidth="166.0" style="-fx-background-color: #16287C;" text="Manage Room" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Separator layoutY="295.0" opacity="0.07" prefHeight="5.0" prefWidth="340.0" style="-fx-background-color: #000000; -fx-border-color: #000000;" />
+            <Separator layoutY="225.0" opacity="0.07" prefHeight="5.0" prefWidth="340.0" style="-fx-background-color: #000000; -fx-border-color: #000000;" />
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="23.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/images/icons8-renew-100.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnChangePwd" layoutX="56.0" layoutY="243.0" mnemonicParsing="false" onAction="#changePasswordOnAction" prefHeight="39.0" prefWidth="183.0" style="-fx-background-color: #16287C;" text="Change password" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Separator layoutY="367.0" opacity="0.12" prefHeight="5.0" prefWidth="340.0" style="-fx-background-color: #000000; -fx-border-color: #000000;" />
+            <Circle fill="WHITE" layoutX="68.0" layoutY="41.0" radius="21.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="36.0" fitWidth="42.0" layoutX="50.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/images/icons8-hotel-building-100.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnRegistrationDetails" layoutX="55.0" layoutY="313.0" mnemonicParsing="false" onAction="#registrationDetailsOnAction" prefHeight="39.0" prefWidth="202.0" style="-fx-background-color: #16287C;" text="Registration Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="92.0" layoutY="692.0" mnemonicParsing="false" onAction="#logOutOnAction" prefHeight="44.0" prefWidth="152.0" style="-fx-background-color: RED; -fx-background-radius: 25;" text="    LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="46.0" fitWidth="54.0" layoutX="89.0" layoutY="691.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/images/icons8-shutdown-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="11.0" layoutY="759.0" text="Version 1.0.0" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutY="122.0" opacity="0.03" prefHeight="3.0" prefWidth="340.0" style="-fx-background-color: black; -fx-border-color: black;" />
+      <AnchorPane layoutX="340.0" prefHeight="51.0" prefWidth="1066.0" style="-fx-background-color: #223A96;">
+         <children>
+            <Label fx:id="lblDate" layoutX="619.0" layoutY="17.0" prefHeight="27.0" prefWidth="232.0" text="Saturday, June 25, 2022" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="877.0" layoutY="17.0" prefHeight="27.0" prefWidth="122.0" text="12:33:15 PM " textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+            <Circle fill="WHITE" layoutX="42.0" layoutY="26.0" radius="13.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="29.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/images/icons8-administrator-male-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="69.0" layoutY="11.0" prefHeight="27.0" prefWidth="244.0" text="Admin - Mr.Kamal Silva" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="732.0" fitWidth="1066.0" layoutX="340.0" layoutY="51.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/images/hostel2.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="optionContext" layoutX="340.0" layoutY="51.0" prefHeight="732.0" prefWidth="1066.0" />
+   </children>
+</AnchorPane>

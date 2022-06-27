@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="732.0" prefWidth="1066.0" style="-fx-background-color: #F3F3F3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.CheckRoomsAvailabilityFormController">
+   <children>
+      <ImageView fitHeight="732.0" fitWidth="1066.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/images/Check_Room_Availability.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="279.0" layoutY="27.0" text="Check Rooms Availability" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+         <effect>
+            <DropShadow radius="35.0" width="121.0" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblRoomAvailability" layoutX="36.0" layoutY="199.0" prefHeight="504.0" prefWidth="994.0" style="-fx-opacity: 90%;">
+        <columns>
+          <TableColumn fx:id="colRoomTypeID" prefWidth="174.0" text="Room Type ID" />
+            <TableColumn fx:id="colRoomType" prefWidth="263.0" text="Room Type" />
+            <TableColumn fx:id="colKeyMoneyCost" prefWidth="181.0" text="Key Money Cost (LKR)" />
+            <TableColumn fx:id="colAvailableRoomsQty" prefWidth="208.0" text="Available Rooms Qty" />
+            <TableColumn fx:id="colUnavailableRoomsQty" prefWidth="167.0" text="Unavailable" />
+        </columns>
+         <stylesheets>
+            <URL value="@../asset/styles/Table.css" />
+            <URL value="@../asset/styles/CheckRoomAvailability.css" />
+         </stylesheets>
+      </TableView>
+      <Separator layoutX="13.0" layoutY="60.0" prefHeight="3.0" prefWidth="252.0" />
+      <Separator layoutX="826.0" layoutY="59.0" prefHeight="3.0" prefWidth="224.0" />
+   </children>
+</AnchorPane>
