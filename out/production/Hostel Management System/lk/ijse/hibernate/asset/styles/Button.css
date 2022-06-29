@@ -1,0 +1,26 @@
+.button{
+
+}
+
+.button:hover{
+    -fx-background-color:  #1B9CFC;
+}
+.button:pressed{
+    -fx-background-color:  #1B9CFC;
+    -fx-rotate: 5;
+}
+.AnchorPane{
+    -fx-background-color: transparent;
+}
+.spinner{
+    -fx-background-color: transparent;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+.tab-label{
+    -fx-font-size: 20pt;
+}
+.tab-main{
+    -fx-pref-width: 480;
+}

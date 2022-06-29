@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="732.0" prefWidth="1066.0" style="-fx-background-color: #F3F3F3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.RegistrationFormController">
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="528.0" prefHeight="191.0" prefWidth="1017.0" style="-fx-background-color: #D9CEA8;">
+         <children>
+            <Label alignment="CENTER" layoutX="541.0" layoutY="11.0" prefHeight="33.0" prefWidth="35.0" text="Rs." textFill="#cd0101">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalFee" layoutX="581.0" layoutY="10.0" prefHeight="36.0" prefWidth="167.0" text="0.00" textFill="#cd0101">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="342.0" layoutY="65.0" text="Paid Amount  :- ">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPaidAmount" layoutX="542.0" layoutY="57.0" onAction="#paidAmountOnAction" onKeyReleased="#checkPaidAmountOnAction" prefHeight="37.0" prefWidth="202.0" style="-fx-border-color: #2c3e50;">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="341.0" layoutY="123.0" text="Remain Key Money  :- ">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="544.0" layoutY="123.0" prefHeight="21.0" prefWidth="35.0" text="Rs.">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Text fx:id="lblRemainKeyMoneyFee" layoutX="581.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00" wrappingWidth="137.000001616776">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <Label layoutX="342.0" layoutY="16.0" text="Total Fee        :-">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <JFXCheckBox fx:id="cbxPaid" layoutX="861.0" layoutY="52.0" onAction="#checkBoxPaidOnAction" prefHeight="40.0" prefWidth="123.0" text="Paid">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton id="btnSave" fx:id="btnRegister" buttonType="RAISED" layoutX="817.0" layoutY="126.0" onAction="#btnRegisterOnAction" prefHeight="42.0" prefWidth="167.0" style="-fx-background-color: #008D30;" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator layoutX="672.0" layoutY="94.0" prefHeight="0.0" prefWidth="191.0" rotate="90.0" style="-fx-border-width: 1; -fx-background-color: black;">
+               <effect>
+                  <ColorAdjust brightness="-0.35" />
+               </effect>
+            </Separator>
+            <JFXButton id="btnSave" buttonType="RAISED" layoutX="72.0" layoutY="126.0" onAction="#btnCancelRegisterOnAction" prefHeight="42.0" prefWidth="187.0" style="-fx-background-color: #e84118;" text="Cancel Register" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXDatePicker fx:id="dpArrivalDate" layoutX="58.0" layoutY="16.0" onAction="#arrivalDateOnAction" prefHeight="31.0" prefWidth="230.0" promptText="Arrival Date" />
+            <JFXDatePicker fx:id="dpDepartureDate" layoutX="58.0" layoutY="68.0" onAction="#departureDateOnAction" prefHeight="31.0" prefWidth="230.0" promptText="Departure Date" />
+            <Separator layoutX="226.0" layoutY="94.0" prefHeight="0.0" prefWidth="191.0" rotate="90.0" style="-fx-border-width: 1; -fx-background-color: black;">
+               <effect>
+                  <ColorAdjust brightness="-0.35" />
+               </effect>
+            </Separator>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="25.0" layoutY="70.0" prefHeight="269.0" prefWidth="1017.0" style="-fx-background-color: #D9CEA8;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="868.0" layoutY="60.0" onAction="#clearStudentFieldsOnAction" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #f1c40f;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <TextField fx:id="txtSearchStudent" layoutX="45.0" layoutY="129.0" onAction="#txtSearchStudentOnAction" onKeyReleased="#searchCustomerKeyReleasedOnAction" prefHeight="40.0" prefWidth="253.0" promptText="Search by Student ID" style="-fx-border-color: #2c3e50;">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <Circle layoutX="52.0" layoutY="96.0" opacity="0.7" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="76.0" layoutY="82.0" text="Customer Details">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSearchStudent" buttonType="RAISED" layoutX="329.0" layoutY="129.0" onAction="#btnSearchStudentOnAction" prefHeight="39.0" prefWidth="123.0" style="-fx-background-color: #f39c12 #f39c12;" text="   Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="337.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-search-100.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbStudentID" layoutX="45.0" layoutY="196.0" prefHeight="40.0" prefWidth="230.0" promptText="Student ID" style="-fx-border-width: 1; -fx-border-color: black; -fx-font-weight: BOLD;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <JFXTextField fx:id="txtStudentName" editable="false" labelFloat="true" layoutX="328.0" layoutY="197.0" prefHeight="37.0" prefWidth="280.0" promptText="Name" unFocusColor="#860a0a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMobileNumber" editable="false" labelFloat="true" layoutX="328.0" layoutY="268.0" prefHeight="37.0" prefWidth="253.0" promptText="Mobile Number" unFocusColor="#860a0a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" editable="false" labelFloat="true" layoutX="661.0" layoutY="197.0" prefHeight="37.0" prefWidth="363.0" promptText="Address" unFocusColor="#860a0a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBirthDate" editable="false" labelFloat="true" layoutX="632.0" layoutY="268.0" prefHeight="37.0" prefWidth="187.0" promptText="Date of Birth" unFocusColor="#860a0a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtGender" editable="false" labelFloat="true" layoutX="871.0" layoutY="268.0" prefHeight="37.0" prefWidth="153.0" promptText="Gender" unFocusColor="#860a0a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <AnchorPane layoutX="25.0" layoutY="348.0" prefHeight="170.0" prefWidth="1017.0" style="-fx-background-color: #D9CEA8;">
+         <children>
+            <Circle layoutX="31.0" layoutY="27.0" opacity="0.7" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="55.0" layoutY="13.0" text="Room Details">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtKeyMoneyFee" editable="false" labelFloat="true" layoutX="573.0" layoutY="61.0" prefHeight="37.0" prefWidth="247.0" promptText="Key Money Fee (LKR)" unFocusColor="#860a0a">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtRoomType" editable="false" labelFloat="true" layoutX="283.0" layoutY="61.0" prefHeight="37.0" prefWidth="253.0" promptText="Room Type" unFocusColor="#860a0a">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtRoomsQty" editable="false" labelFloat="true" layoutX="857.0" layoutY="61.0" prefHeight="37.0" prefWidth="145.0" promptText="Rooms Qty" unFocusColor="#860a0a">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <ComboBox fx:id="cmbRoomTypeID" layoutX="21.0" layoutY="60.0" prefHeight="40.0" prefWidth="230.0" promptText="Room Type ID" style="-fx-border-width: 1; -fx-border-color: BLACK; -fx-font-weight: bold;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <JFXButton buttonType="RAISED" layoutX="872.0" layoutY="119.0" onAction="#clearRoomFieldsOnAction" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #f1c40f;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label layoutX="631.0" layoutY="22.0" text="RESERVATION ID : -">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtReservationID" alignment="CENTER" editable="false" layoutX="814.0" layoutY="16.0" prefHeight="0.0" prefWidth="228.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Text layoutX="76.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Registration Form">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-registration-100%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
