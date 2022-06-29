@@ -1,4 +1,5 @@
 package lk.ijse.hibernate.controller;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -23,4 +24,22 @@ public class ReceptionistDashBoardFormController {
     public AnchorPane optionContext;
     public Label lblRemainKeyMoney;
     public Button btnRemainKeyMoney;
+
+    public void checkRoomsAvailabilityOnAction(ActionEvent event) {
+    }
+
+    public void manageStudentOnAction(ActionEvent event) {
+    }
+
+    public void makeRegistrationOnAction(ActionEvent event) {
+    }
+
+    public void logOutOnAction(ActionEvent event) {
+    }
+
+    public void findRemainKeyMoneyStudentsOnAction(ActionEvent event) {
+    }
+
+    public void changePasswordOnAction(ActionEvent event) {
+    }
 }
