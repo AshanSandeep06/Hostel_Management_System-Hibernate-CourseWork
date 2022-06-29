@@ -36,8 +36,16 @@ public class CheckRoomsAvailabilityFormController {
 
     private void loadAllRoomDetails() {
         try{
-            //ArrayList<CustomDTO> list = bo.loadAllRoomsDetails();
-
+            ArrayList<CustomDTO> list = bo.loadAllRoomsDetails();
+            for (CustomDTO dto : list) {
+                tblRoomAvailability.getItems().add(new RoomAvailabilityTM(
+                        dto.getRoom_type_id(),
+                        dto.getType(),
+                        dto.getKey_money(),
+                        dto.getAvailable_rooms_qty(),
+                        dto.getUnavailable_rooms_qty()
+                ));
+            }
 
         }catch (Exception e){
             e.printStackTrace();

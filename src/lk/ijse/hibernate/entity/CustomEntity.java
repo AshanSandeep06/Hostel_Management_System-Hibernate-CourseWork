@@ -87,4 +87,12 @@ public class CustomEntity {
     private String contact_no;
     private LocalDate dob;
     private String gender;
+
+    public CustomEntity(String room_type_id, String type, String key_money, int available_rooms_qty, int unavailable_rooms_qty) {
+        this.room_type_id = room_type_id;
+        this.type = type;
+        this.key_money = key_money;
+        this.available_rooms_qty = available_rooms_qty;
+        this.unavailable_rooms_qty = unavailable_rooms_qty;
+    }
 }

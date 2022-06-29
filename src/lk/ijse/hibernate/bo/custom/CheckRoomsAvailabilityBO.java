@@ -14,5 +14,5 @@ import java.util.ArrayList;
  **/
 
 public interface CheckRoomsAvailabilityBO extends SuperBO {
-
+    ArrayList<CustomDTO> loadAllRoomsDetails() throws Exception;
 }
