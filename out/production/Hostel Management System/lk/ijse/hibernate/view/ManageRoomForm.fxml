@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="732.0" prefWidth="1066.0" style="-fx-background-color: #F3F3F3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.ManageRoomFormController">
+   <children>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="354.0" layoutY="100.0" onAction="#searchRoomOnAction" prefHeight="37.0" prefWidth="115.0" style="-fx-background-color: #009432;" text="    Search" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtKeyMoneyCost" labelFloat="true" layoutX="91.0" layoutY="262.0" onKeyReleased="#validateKeyReleasedOnAction" prefHeight="37.0" prefWidth="247.0" promptText="Key Money Cost (LKR)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="594.0" layoutY="350.0" onAction="#updateRoomOnAction" prefHeight="39.0" prefWidth="141.0" style="-fx-background-color: #3498db;" text="   Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="754.0" layoutY="350.0" onAction="#deleteRoomOnAction" prefHeight="39.0" prefWidth="141.0" style="-fx-background-color: #EA2027;" text="   Remove" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblRoom" layoutX="42.0" layoutY="412.0" prefHeight="296.0" prefWidth="981.0" stylesheets="@../asset/styles/Table.css">
+         <columns>
+            <TableColumn fx:id="colRoomTypeID" prefWidth="207.0" text="Room Type ID" />
+            <TableColumn fx:id="colRoomType" prefWidth="327.0" text="Room Type" />
+            <TableColumn fx:id="colKeyMoneyCost" prefWidth="248.0" text="Key Money Cost (LKR)" />
+            <TableColumn fx:id="colRoomsQty" prefWidth="198.0" text="Rooms Qty" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="916.0" layoutY="350.0" onAction="#resetOnAction" prefHeight="34.0" prefWidth="99.0" style="-fx-background-radius: 15; -fx-background-color: #f1c40f;" text="Reset" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="81.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Rooms">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-living-room-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnAddNewRoom" buttonType="RAISED" layoutX="885.0" layoutY="22.0" onAction="#btnAddNewRoomOnAction" prefHeight="35.0" prefWidth="141.0" style="-fx-cursor: hand; -fx-background-color: #f39c12 #f39c12;" text="+ New Room" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtRoomType" labelFloat="true" layoutX="575.0" layoutY="184.0" onKeyReleased="#validateKeyReleasedOnAction" prefHeight="37.0" prefWidth="288.0" promptText="Room Type">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="21.0" fitWidth="34.0" layoutX="604.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-available-updates-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="756.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-delete-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="434.0" layoutY="350.0" onAction="#addRoomOnAction" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #16a085;" text="  Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="441.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-add-100%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="363.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-search-100.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtSearchRoom" layoutX="81.0" layoutY="100.0" onAction="#txtSearchRoomOnAction" onKeyReleased="#searchRoomKeyReleasedOnAction" prefHeight="40.0" prefWidth="247.0" promptText="Search Room" style="-fx-border-color: #2c3e50;">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <JFXTextField fx:id="txtRoomsQty" labelFloat="true" layoutX="575.0" layoutY="262.0" onKeyReleased="#validateKeyReleasedOnAction" prefHeight="37.0" prefWidth="217.0" promptText="Rooms Qty">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRoomTypeID" labelFloat="true" layoutX="91.0" layoutY="184.0" onKeyReleased="#validateKeyReleasedOnAction" prefHeight="37.0" prefWidth="247.0" promptText="Room Type ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+.root{
+    -fx-background-color:papayawhip;
+}
+
+.table-view{
+   /* -fx-background-color: transparent;*/
+}
+
+.table-view:focused{
+    /*-fx-background-color: transparent;*/
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(    #860a0a 0%,     #860a0a 100%);
+}
+
+
+.table-view .column-header-background .label{
+    /*-fx-background-color: transparent;*/
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
