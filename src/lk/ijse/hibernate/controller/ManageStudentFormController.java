@@ -11,6 +11,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import lk.ijse.hibernate.bo.BOFactory;
 import lk.ijse.hibernate.bo.custom.StudentBO;
+import lk.ijse.hibernate.view.tdm.RoomTM;
+import lk.ijse.hibernate.view.tdm.StudentTM;
 
 import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
@@ -27,7 +29,7 @@ public class ManageStudentFormController {
     public JFXTextField txtMobileNumber;
     public JFXButton btnUpdate;
     public JFXButton btnRemove;
-    public TableView tblStudent;
+    public TableView<StudentTM> tblStudent;
     public TableColumn colStudentID;
     public TableColumn colName;
     public TableColumn colAddress;
