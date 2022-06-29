@@ -2,9 +2,12 @@ package lk.ijse.hibernate.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 /**
  * @author : Ashan Sandeep
@@ -23,4 +26,25 @@ public class ChangePasswordFormController {
     public JFXButton btnChangeUsername_pwd;
     public ImageView imgPassword;
     public ImageView imgPassword1;
+
+    public void changePasswordKeyReleasedOnAction(KeyEvent keyEvent) {
+    }
+
+    public void changeUsername_passwordOnAction(ActionEvent event) {
+    }
+
+    public void clearAllOnAction(ActionEvent event) {
+    }
+
+    public void showNewPasswordOnAction(MouseEvent mouseEvent) {
+    }
+
+    public void hideNewPasswordOnAction(MouseEvent mouseEvent) {
+    }
+
+    public void showConfirmNewPasswordOnAction(MouseEvent mouseEvent) {
+    }
+
+    public void hideConfirmNewPasswordOnAction(MouseEvent mouseEvent) {
+    }
 }
