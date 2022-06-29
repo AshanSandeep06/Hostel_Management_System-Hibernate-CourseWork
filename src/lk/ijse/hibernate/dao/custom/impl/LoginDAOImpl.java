@@ -78,4 +78,21 @@ public class LoginDAOImpl implements LoginDAO {
         }
         return null;
     }
+
+    @Override
+    public boolean changeUsernameAndPasswordByCurrentUsername(String currentUserName, String newUserName, String newPassword) throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("UPDATE Login l SET l.userName=:nu, l.password=:p WHERE l.userName=:cu");
+        query.setParameter("nu", newUserName);
+        query.setParameter("p", newPassword);
+        query.setParameter("cu", currentUserName);
+
+        int affectedRowCount = query.executeUpdate();
+
+        transaction.commit();
+        session.close();
+        return affectedRowCount>0;
+    }
 }
