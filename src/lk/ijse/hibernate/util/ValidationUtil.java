@@ -27,8 +27,6 @@ public class ValidationUtil {
 
     private static void addError(TextField textField, JFXButton... btn) {
         if (textField.getText().length() > 0) {
-            /*textField.setStyle("-fx-border-width: 4");
-            textField.setStyle("-fx-border-color: red");*/
             textField.setStyle("-fx-text-fill: RED");
         }else{
             textField.setStyle("-fx-text-fill: BLACK");
@@ -39,9 +37,6 @@ public class ValidationUtil {
     }
 
     private static void removeError(TextField textField, JFXButton... btn) {
-        /*textField.setStyle("-fx-border-width: 4");
-        textField.setStyle("-fx-border-color: green");*/
-
         textField.setStyle("-fx-text-fill: BLACK");
         for (JFXButton button : btn) {
             button.setDisable(false);
