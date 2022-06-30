@@ -118,7 +118,7 @@ public class ManageRoomFormController {
                     }
                 } else {
                     clearAll();
-                    new Alert(Alert.AlertType.WARNING, "Invalid Room ID ..!").show();
+                    new Alert(Alert.AlertType.WARNING, "Invalid RoomTypeID ..!").show();
                 }
             } else {
                 clearAll();
