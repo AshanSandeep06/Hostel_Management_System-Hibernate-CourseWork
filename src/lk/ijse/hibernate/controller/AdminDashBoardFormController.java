@@ -90,9 +90,9 @@ public class AdminDashBoardFormController {
         setUI("ChangePasswordForm");
     }
 
-    public void registrationDetailsOnAction(ActionEvent event) {
+    public void registrationDetailsOnAction(ActionEvent event) throws IOException {
         setColors(lblRegistrationDetails, btnRegistrationDetails);
-//        setUI("");
+        setUI("ViewStudentRegistrationDetailForm");
     }
 
     public void logOutOnAction(ActionEvent event) throws IOException {
