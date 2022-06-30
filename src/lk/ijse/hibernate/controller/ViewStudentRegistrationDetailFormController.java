@@ -40,7 +40,7 @@ public class ViewStudentRegistrationDetailFormController {
     // Property Injection
     ViewStudentRegistrationDetailBO bo = (ViewStudentRegistrationDetailBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.VIEWSTUDENTREGISTRATIONDETAIL);
 
-    public void initialize(){
+    public void initialize() {
         colReservationID.setCellValueFactory(new PropertyValueFactory<>("reservationId"));
         colStudentID.setCellValueFactory(new PropertyValueFactory<>("studentId"));
         colStudentName.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -69,7 +69,7 @@ public class ViewStudentRegistrationDetailFormController {
             if (!txtRoomTypeID.getText().isEmpty()) {
                 if (txtRoomTypeID.getText().matches("^(RM-)[0-9]{4}$")) {
                     String roomTypeID = txtRoomTypeID.getText();
-                    if(existRoom(roomTypeID)){
+                    if (existRoom(roomTypeID)) {
                         RoomDTO roomDTO = bo.searchRoom(roomTypeID);
 
                         if (roomDTO != null) {
@@ -95,7 +95,7 @@ public class ViewStudentRegistrationDetailFormController {
                                 e.printStackTrace();
                             }
                         }
-                    }else{
+                    } else {
                         new Alert(Alert.AlertType.ERROR, "No rooms exists for this RoomTypeID..!", ButtonType.OK).show();
                         clear();
                     }
@@ -123,20 +123,20 @@ public class ViewStudentRegistrationDetailFormController {
     }
 
     public void keyReleasedOnAction(KeyEvent keyEvent) {
-        if(txtRoomTypeID.getText().matches("^(RM-)[0-9]{4}$")){
+        if (txtRoomTypeID.getText().matches("^(RM-)[0-9]{4}$")) {
             txtRoomTypeID.setStyle("-fx-text-fill: BLACK");
             btnSearch.setDisable(false);
-        }else{
-            if(txtRoomTypeID.getText().length()>0){
+        } else {
+            if (txtRoomTypeID.getText().length() > 0) {
                 txtRoomTypeID.setStyle("-fx-text-fill: RED");
-            }else{
+            } else {
                 txtRoomTypeID.setStyle("-fx-text-fill: BLACK");
             }
             btnSearch.setDisable(true);
         }
     }
 
-    private void clear(){
+    private void clear() {
         txtRoomTypeID.clear();
         txtRoomType.clear();
         txtRoomsQty.clear();
