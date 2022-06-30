@@ -29,7 +29,7 @@ public class Student implements SuperEntity{
     private LocalDate dob;
     private String gender;
 
-    @OneToMany(mappedBy = "student", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
     private List<Reservation> reserveList = new ArrayList<>();
 
     public Student(String student_id, String name, String address, String contact_no, LocalDate dob, String gender) {
