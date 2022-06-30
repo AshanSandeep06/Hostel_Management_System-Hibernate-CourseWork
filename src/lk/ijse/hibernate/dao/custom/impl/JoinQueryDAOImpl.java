@@ -5,6 +5,7 @@ import lk.ijse.hibernate.entity.CustomEntity;
 import lk.ijse.hibernate.util.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 
 import java.time.LocalDate;
@@ -99,6 +100,37 @@ public class JoinQueryDAOImpl implements JoinQueryDAO {
                     LocalDate.parse(String.valueOf(obj[6])),
                     LocalDate.parse(String.valueOf(obj[7])),
                     String.valueOf(obj[8])
+            ));
+        }
+
+        transaction.commit();
+        session.close();
+        return arrayList;
+    }
+
+    @Override
+    public ArrayList<CustomEntity> getStudentDetailsByRoomTypeId(String roomTypeId) throws Exception {
+        String sql = "SELECT re.res_id, re.student_student_id, s.name, s.address, s.contact_no, s.dob, s.gender, re.arrival_date, re.departure_date FROM Reservation re INNER JOIN Student s ON re.student_student_id = s.student_id WHERE re.room_room_type_id = :id";
+
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        ArrayList<CustomEntity> arrayList = new ArrayList<>();
+        NativeQuery sqlQuery = session.createSQLQuery(sql);
+        sqlQuery.setParameter("id",roomTypeId);
+        List<Object[]> list = sqlQuery.list();
+
+        for (Object[] obj : list) {
+            arrayList.add(new CustomEntity(
+                    String.valueOf(obj[0]),
+                    String.valueOf(obj[1]),
+                    String.valueOf(obj[2]),
+                    String.valueOf(obj[3]),
+                    String.valueOf(obj[4]),
+                    LocalDate.parse(String.valueOf(obj[5])),
+                    String.valueOf(obj[6]),
+                    LocalDate.parse(String.valueOf(obj[7])),
+                    LocalDate.parse(String.valueOf(obj[8]))
             ));
         }
 

@@ -19,7 +19,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        LOGIN, ADMINDASHBOARDBO, RECEPTIONISTDASHBOARDBO,CHANGEPASSWORDBO,CHECKROOMSAVAILABILITYBO, HOMEPAGEBO, ROOM, STUDENT, REGISTRATIONBO, FINDREMAINKEYMONEYSTUDENTSBO
+        LOGIN, ADMINDASHBOARDBO, RECEPTIONISTDASHBOARDBO,CHANGEPASSWORDBO,CHECKROOMSAVAILABILITYBO, HOMEPAGEBO, ROOM, STUDENT, REGISTRATIONBO, FINDREMAINKEYMONEYSTUDENTSBO, VIEWSTUDENTREGISTRATIONDETAIL
     }
 
     public SuperBO getBO(BOTypes types){
@@ -44,6 +44,8 @@ public class BOFactory {
                 return new RegistrationBOImpl();
             case FINDREMAINKEYMONEYSTUDENTSBO:
                 return new FindRemainKeyMoneyStudentsBOImpl();
+            case VIEWSTUDENTREGISTRATIONDETAIL:
+                return new ViewStudentRegistrationDetailBOImpl();
             default:
                 return null;
         }

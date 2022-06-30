@@ -22,4 +22,6 @@ public interface JoinQueryDAO extends SuperDAO {
     ArrayList<CustomEntity> findAllRemainKeyMoneyStudentDetails() throws Exception;
 
     ArrayList<CustomEntity> findRemainKeyMoneyDetailsByStudentId(String studentID) throws Exception;
+
+    ArrayList<CustomEntity> getStudentDetailsByRoomTypeId(String roomTypeId) throws Exception;
 }

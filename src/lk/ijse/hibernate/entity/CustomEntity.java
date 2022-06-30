@@ -107,4 +107,16 @@ public class CustomEntity {
         this.remain_key_money = remain_key_money;
         this.status = status;
     }
+
+    public CustomEntity( String res_id, String student_id, String name, String address, String contact_no, LocalDate dob, String gender, LocalDate arrival_date, LocalDate departure_date) {
+        this.name = name;
+        this.res_id = res_id;
+        this.arrival_date = arrival_date;
+        this.departure_date = departure_date;
+        this.student_id = student_id;
+        this.address = address;
+        this.contact_no = contact_no;
+        this.dob = dob;
+        this.gender = gender;
+    }
 }
