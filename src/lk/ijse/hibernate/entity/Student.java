@@ -3,6 +3,7 @@ package lk.ijse.hibernate.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -18,6 +19,8 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @Entity(name = "Student")
+@Cacheable
+@org.hibernate.annotations.Cache(usage= CacheConcurrencyStrategy.READ_WRITE)
 public class Student implements SuperEntity{
     @Id
     @Column(name = "student_id")

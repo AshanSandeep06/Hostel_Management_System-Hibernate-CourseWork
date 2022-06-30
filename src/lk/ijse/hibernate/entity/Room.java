@@ -3,6 +3,7 @@ package lk.ijse.hibernate.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,6 +18,8 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @Entity(name = "Room")
+@Cacheable
+@org.hibernate.annotations.Cache(usage= CacheConcurrencyStrategy.READ_WRITE)
 public class Room implements SuperEntity{
     @Id
     private String room_type_id;
