@@ -18,20 +18,20 @@ import java.util.ArrayList;
 
 public class ViewStudentRegistrationDetailBOImpl implements ViewStudentRegistrationDetailBO {
     // Property Injection
-    private RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
-    private JoinQueryDAO joinQueryDAO = (JoinQueryDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.JOINQUERYDAO);
+    private final RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
+    private final JoinQueryDAO joinQueryDAO = (JoinQueryDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.JOINQUERYDAO);
 
     @Override
-    public RoomDTO searchRoom(String roomTypeId) throws Exception{
+    public RoomDTO searchRoom(String roomTypeId) throws Exception {
         Room entity = roomDAO.search(roomTypeId);
-        if(entity!=null){
-            return new RoomDTO(entity.getRoom_type_id(),entity.getType(),entity.getKey_money(),entity.getQty());
+        if (entity != null) {
+            return new RoomDTO(entity.getRoom_type_id(), entity.getType(), entity.getKey_money(), entity.getQty());
         }
         return null;
     }
 
     @Override
-    public boolean roomIsExists(String roomTypeID) throws Exception{
+    public boolean roomIsExists(String roomTypeID) throws Exception {
         return roomDAO.isExists(roomTypeID);
     }
 
