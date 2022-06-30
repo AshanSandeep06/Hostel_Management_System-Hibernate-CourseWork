@@ -47,4 +47,16 @@ public class CustomDTO {
         this.available_rooms_qty = available_rooms_qty;
         this.unavailable_rooms_qty = unavailable_rooms_qty;
     }
+
+    public CustomDTO(String student_id, String name, String res_id, String room_type_id, double paid_key_money, double remain_key_money, LocalDate arrival_date, LocalDate departure_date, String status) {
+        this.name = name;
+        this.res_id = res_id;
+        this.room_type_id = room_type_id;
+        this.arrival_date = arrival_date;
+        this.departure_date = departure_date;
+        this.student_id = student_id;
+        this.paid_key_money = paid_key_money;
+        this.remain_key_money = remain_key_money;
+        this.status = status;
+    }
 }
