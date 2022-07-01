@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class StudentBOImpl implements StudentBO {
 
     // Property Injection
-    private StudentDAO studentDAO = (StudentDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.STUDENT);
+    private final StudentDAO studentDAO = (StudentDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.STUDENT);
 
     @Override
     public ArrayList<StudentDTO> getAllStudents() throws Exception {
@@ -37,7 +37,7 @@ public class StudentBOImpl implements StudentBO {
     @Override
     public StudentDTO searchStudent(String studentID) throws Exception {
         Student entity = studentDAO.search(studentID);
-        if(entity!=null){
+        if (entity != null) {
             return new StudentDTO(
                     entity.getStudent_id(),
                     entity.getName(),
@@ -57,12 +57,12 @@ public class StudentBOImpl implements StudentBO {
 
     @Override
     public boolean saveStudent(StudentDTO dto) throws Exception {
-        return studentDAO.save(new Student(dto.getStudent_id(),dto.getName(),dto.getAddress(),dto.getContact_no(),dto.getDob(),dto.getGender()));
+        return studentDAO.save(new Student(dto.getStudent_id(), dto.getName(), dto.getAddress(), dto.getContact_no(), dto.getDob(), dto.getGender()));
     }
 
     @Override
     public boolean updateStudent(StudentDTO dto) throws Exception {
-        return studentDAO.update(new Student(dto.getStudent_id(),dto.getName(),dto.getAddress(),dto.getContact_no(),dto.getDob(),dto.getGender()));
+        return studentDAO.update(new Student(dto.getStudent_id(), dto.getName(), dto.getAddress(), dto.getContact_no(), dto.getDob(), dto.getGender()));
     }
 
     @Override
