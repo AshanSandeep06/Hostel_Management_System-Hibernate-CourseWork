@@ -59,7 +59,7 @@
                   <Image url="@../asset/images/icons8-renew-100.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnChangePwd" layoutX="56.0" layoutY="243.0" mnemonicParsing="false" onAction="#changePasswordOnAction" prefHeight="39.0" prefWidth="183.0" style="-fx-background-color: #16287C;" text="Change password" textFill="WHITE">
+            <Button fx:id="btnChangePwd" layoutX="57.0" layoutY="243.0" mnemonicParsing="false" onAction="#changePasswordOnAction" prefHeight="39.0" prefWidth="183.0" style="-fx-background-color: #16287C;" text="Change password" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Image url="@../asset/images/icons8-hotel-building-100.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnRegistrationDetails" layoutX="55.0" layoutY="313.0" mnemonicParsing="false" onAction="#registrationDetailsOnAction" prefHeight="39.0" prefWidth="202.0" style="-fx-background-color: #16287C;" text="Registration Details" textFill="WHITE">
+            <Button fx:id="btnRegistrationDetails" layoutX="55.0" layoutY="313.0" mnemonicParsing="false" onAction="#registrationDetailsOnAction" prefHeight="39.0" prefWidth="202.0" style="-fx-background-color: #16287C;" text="Reservation Details" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

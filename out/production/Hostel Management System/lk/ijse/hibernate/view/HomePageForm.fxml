@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="783.0" prefWidth="1406.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.HomePageFormController">
+   <children>
+      <ImageView fitHeight="783.0" fitWidth="1406.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/images/dark-wall-empty-room-with-plants-floor-3d-rendering%20(1)-min.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="446.0" layoutY="64.0" opacity="0.93" text="WELCOME TO D24 HOSTEL" textFill="WHITE">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1094.0" layoutY="755.0" prefHeight="19.0" prefWidth="308.0" text="Copyright 2022 D24 Hostel. All Rights Reserved." textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="755.0" text="Version 1.0.0" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <JFXProgressBar fx:id="progressBar" layoutX="211.0" layoutY="697.0" prefHeight="15.0" prefWidth="890.0" />
+      <ProgressIndicator fx:id="progressPercentage" layoutX="1138.0" layoutY="694.0" prefHeight="21.0" prefWidth="59.0" progress="0.0" />
+      <ImageView fx:id="imgHostel" fitHeight="235.0" fitWidth="285.0" layoutX="561.0" layoutY="254.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/images/hoste5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="95.0" layoutX="339.0" layoutY="48.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/images/2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

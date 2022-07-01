@@ -18,10 +18,10 @@
       <TableView fx:id="tblStudentDetail" layoutX="14.0" layoutY="189.0" prefHeight="524.0" prefWidth="1039.0">
          <columns>
             <TableColumn fx:id="colReservationID" prefWidth="111.0" text="Reservation ID" />
-            <TableColumn fx:id="colStudentID" prefWidth="128.0" text="Student ID" />
-            <TableColumn fx:id="colStudentName" prefWidth="115.0" text="Student Name" />
-            <TableColumn fx:id="colAddress" prefWidth="200.0" text="Address" />
-            <TableColumn fx:id="colContactNo" prefWidth="132.0" text="Contact No" />
+            <TableColumn fx:id="colStudentID" prefWidth="96.0" text="Student ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="166.0" text="Student Name" />
+            <TableColumn fx:id="colAddress" prefWidth="212.0" text="Address" />
+            <TableColumn fx:id="colContactNo" prefWidth="101.0" text="Contact No" />
             <TableColumn fx:id="colDob" prefWidth="98.0" text="Date of Birth" />
             <TableColumn fx:id="colGender" prefWidth="71.0" text="Gender" />
             <TableColumn fx:id="colArrivalDate" prefWidth="95.0" text="Arrival Date" />
