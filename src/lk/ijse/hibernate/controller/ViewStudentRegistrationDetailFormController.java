@@ -38,7 +38,7 @@ public class ViewStudentRegistrationDetailFormController {
     public JFXTextField txtRoomsQty;
 
     // Property Injection
-    ViewStudentRegistrationDetailBO bo = (ViewStudentRegistrationDetailBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.VIEWSTUDENTREGISTRATIONDETAIL);
+    ViewStudentRegistrationDetailBO bo = (ViewStudentRegistrationDetailBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.VIEWSTUDENTREGISTRATIONDETAILBO);
 
     public void initialize() {
         colReservationID.setCellValueFactory(new PropertyValueFactory<>("reservationId"));
