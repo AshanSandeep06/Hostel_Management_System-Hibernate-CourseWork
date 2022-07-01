@@ -91,6 +91,7 @@ public class ChangePasswordFormController {
         txtConfirmNewPwd.clear();
         txtNewUserName.clear();
         lblConfirmNewPwd.setText("");
+        btnChangeUsername_pwd.setDisable(true);
     }
 
     public void clearAllOnAction(ActionEvent event) {

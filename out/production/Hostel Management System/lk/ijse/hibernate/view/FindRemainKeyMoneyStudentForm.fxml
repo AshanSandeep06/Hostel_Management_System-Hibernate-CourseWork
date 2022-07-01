@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="732.0" prefWidth="1066.0" style="-fx-background-color: #F3F3F3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.FindRemainKeyMoneyStudentFormController">
+   <children>
+      <TableView fx:id="tblRemainKeyMoneyStudents" layoutX="36.0" layoutY="181.0" prefHeight="524.0" prefWidth="994.0">
+         <columns>
+            <TableColumn fx:id="colStudentID" prefWidth="89.0" text="Student ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="150.0" text="Student Name" />
+            <TableColumn fx:id="colReservationID" prefWidth="115.0" text="Reservation ID" />
+            <TableColumn fx:id="colRoomTypeID" prefWidth="129.0" text="Room Type ID" />
+            <TableColumn fx:id="colPaidKeyMoney" prefWidth="123.0" text="Paid Key Money" />
+            <TableColumn fx:id="colRemainKeyMoneyFee" prefWidth="178.0" text="Remain Key Money Fee" />
+            <TableColumn fx:id="colArrivalDate" prefWidth="115.0" text="Arrival Date" />
+            <TableColumn fx:id="colDepartureDate" prefWidth="94.0" text="Departure" />
+         </columns>
+         <stylesheets>
+            <URL value="@../asset/styles/Table.css" />
+            <URL value="@../asset/styles/CheckRoomAvailability.css" />
+         </stylesheets>
+      </TableView>
+      <Text layoutX="81.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find Remain Key Money Students">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-search-folder-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="309.0" layoutY="85.0" onAction="#searchStudentOnAction" prefHeight="37.0" prefWidth="115.0" style="-fx-background-color: #009432;" text="    Search" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="318.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/icons8-search-100.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtSearchStudent" layoutX="36.0" layoutY="85.0" onKeyReleased="#searchStudentKeyReleasedOnAction" prefHeight="40.0" prefWidth="247.0" promptText="Search By Student ID" style="-fx-border-color: #2c3e50;">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
