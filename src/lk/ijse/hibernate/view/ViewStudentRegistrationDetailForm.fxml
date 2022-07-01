@@ -32,7 +32,7 @@
             <URL value="@../asset/styles/CheckRoomAvailability.css" />
          </stylesheets>
       </TableView>
-      <Text layoutX="81.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Student Registration Detail">
+      <Text layoutX="81.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Student Reservation Details">
          <font>
             <Font size="25.0" />
          </font>
