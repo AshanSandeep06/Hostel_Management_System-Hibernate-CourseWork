@@ -6,6 +6,7 @@ import lk.ijse.hibernate.dao.custom.JoinQueryDAO;
 import lk.ijse.hibernate.dao.custom.ReservationDAO;
 import lk.ijse.hibernate.dao.custom.StudentDAO;
 import lk.ijse.hibernate.dto.CustomDTO;
+import lk.ijse.hibernate.dto.ReservationDTO;
 import lk.ijse.hibernate.dto.StudentDTO;
 import lk.ijse.hibernate.entity.CustomEntity;
 import lk.ijse.hibernate.entity.Reservation;
@@ -43,8 +44,21 @@ public class FindRemainKeyMoneyStudentsBOImpl implements FindRemainKeyMoneyStude
     }
 
     @Override
-    public Reservation searchReservation(String reservationID) throws Exception {
-        return reservationDAO.search(reservationID);
+    public ReservationDTO searchReservation(String reservationID) throws Exception {
+        Reservation entity = reservationDAO.search(reservationID);
+        if(entity!=null){
+            return new ReservationDTO(
+                    entity.getRes_id(),
+                    entity.getArrival_date(),
+                    entity.getDeparture_date(),
+                    entity.getStudent().getStudent_id(),
+                    entity.getRoom().getRoom_type_id(),
+                    entity.getPaid_key_money(),
+                    entity.getRemain_key_money(),
+                    entity.getStatus()
+            );
+        }
+        return null;
     }
 
     @Override

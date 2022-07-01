@@ -6,6 +6,7 @@ import lk.ijse.hibernate.dao.custom.JoinQueryDAO;
 import lk.ijse.hibernate.dao.custom.ReservationDAO;
 import lk.ijse.hibernate.dao.custom.StudentDAO;
 import lk.ijse.hibernate.dto.CustomDTO;
+import lk.ijse.hibernate.dto.ReservationDTO;
 import lk.ijse.hibernate.dto.StudentDTO;
 import lk.ijse.hibernate.entity.CustomEntity;
 import lk.ijse.hibernate.entity.Reservation;
@@ -22,7 +23,7 @@ public interface FindRemainKeyMoneyStudentsBO extends SuperBO {
 
     ArrayList<CustomDTO> loadAllRemainKeyMoneyStudentDetails() throws Exception;
 
-    Reservation searchReservation(String reservationID) throws Exception;
+    ReservationDTO searchReservation(String reservationID) throws Exception;
 
     ArrayList<CustomDTO> findRemainKeyMoneyDetails(String studentID) throws Exception;
 
