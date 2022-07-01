@@ -16,7 +16,8 @@ import java.util.ArrayList;
 public class RoomBOImpl implements RoomBO {
 
     //Property Injection
-    RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
+    private final RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
+
     @Override
     public boolean roomIsExists(String roomTypeID) throws Exception{
         return roomDAO.isExists(roomTypeID);
