@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class CheckRoomsAvailabilityBOImpl implements CheckRoomsAvailabilityBO {
     // Property Injection
-    RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
+    private final RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
     private final JoinQueryDAO joinQueryDAO = (JoinQueryDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.JOINQUERYDAO);
 
     @Override
