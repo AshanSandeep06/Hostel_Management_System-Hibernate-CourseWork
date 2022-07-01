@@ -18,7 +18,21 @@ import java.util.List;
 public class LoginDAOImpl implements LoginDAO {
     @Override
     public ArrayList<Login> getAll() throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql = "FROM Login";
+        Query query = session.createQuery(hql);
+        List<Login> list = query.list();
+
+        transaction.commit();
+        session.close();
+        Iterator<Login> itr = list.iterator();
+        ArrayList<Login> allLogins = new ArrayList<>();
+        while (itr.hasNext()){
+            allLogins.add(itr.next());
+        }
+        return allLogins;
     }
 
     @Override

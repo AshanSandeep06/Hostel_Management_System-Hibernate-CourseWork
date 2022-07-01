@@ -44,15 +44,17 @@ public class LoginFormController {
 
     public void initialize() {
         try {
-            /*Session session = FactoryConfiguration.getInstance().getSession();
-            Transaction transaction = session.beginTransaction();
+            if(loginBO.existLogins().size() == 0){
+                Session session = FactoryConfiguration.getInstance().getSession();
+                Transaction transaction = session.beginTransaction();
 
-            loginBO.saveLoginAccess(new LoginDTO("Kamal Silva","admin065","admin123","Admin"));
-            loginBO.saveLoginAccess(new LoginDTO("Himaya Ruwini","himaya099","himaya2001","Receptionist"));
-            loginBO.saveLoginAccess(new LoginDTO("Amali Tharaka","amali123","amali1998","Receptionist"));
+                loginBO.saveLoginAccess(new LoginDTO("Kamal Silva","admin065","admin123","Admin"));
+                loginBO.saveLoginAccess(new LoginDTO("Himaya Ruwini","himaya099","himaya2001","Receptionist"));
+                loginBO.saveLoginAccess(new LoginDTO("Amali Tharaka","amali123","amali1998","Receptionist"));
 
-            transaction.commit();
-            session.close();*/
+                transaction.commit();
+                session.close();
+            }
 
             txtUserName.requestFocus();
             btnLogin.setDisable(true);
